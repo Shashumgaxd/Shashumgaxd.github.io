@@ -1,9 +1,131 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>This is the title of the webpage!</title>
-  </head>
-  <body>
-    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
-  </body>
+<head>
+	<!-- cosas css xd -->
+<style>
+	body{
+  	bottom: 0;
+  	text-align: center;
+  	background: rgba(0, 0, 0, 100);
+  	color: #f1f1f1;
+  	width: 100%;
+  	padding: 20px;
+  	margin: 0;
+  	font-family: Arial;
+  	font-size: 17px;
+	}
+
+	#anim {
+  	background-image: url('https://i.imgur.com/GUumvqS.jpg');
+  	width: 250px;
+  	height: 188px;
+  	animation: anim 3s steps(60) infinite;
+	}
+
+	@keyframes anim {
+  	100% { background-position: -15000px; }
+	}
+
+	.button {
+	background-color: #3285a8;
+	border: none;
+	color: #fff9f9;
+	padding: 10px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 12px;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	}
+	.center {
+  	margin: auto;
+  	width: 100%;
+	}
+
+	</style>
+	<title>AAAAAAAAA</title>
+</head>
+<body onload="paused()">
+<script>
+	function play() {
+  		document.getElementById('anim').style.animationPlayState = 'running';
+	}
+	function paused() {
+  		document.getElementById('anim').style.animationPlayState = 'paused';
+	}
+	function PlaySound(melody) {
+        var path = "https://www.mboxdrive.com/Rick_Astley_-_Never_Gonna_Give_You_Up_Qoret.com.mp3"
+        var snd = new Audio(path);
+        snd.play();
+    }
+</script>
+
+<!-- animacion cosa... dure como 1 hora y media haciendo que esta cochinada funcionara... pero valio la pena :D -->
+<div class="center" id="anim" title="XDDDD"></div>
+<button onmouseover="style.color = 'orange'" id="yes" class="button" onclick="play(); PlaySound('melody1'); document.getElementById('yes').style.color='red' ;"> Que hara este boton? O:</button>
+
+
+	<p id="id1"></p>
+<!-- Este evento checa que las cookies esten habilitadas o no usando la id de <p> -->
+	<script>
+		function checkCookies(){
+			var text = "";
+			if (navigator.cookieEnabled == true){
+				text = "Las cookies estan habilitadas";
+			} else {
+				text = "Las cookies no estan habilitadas";
+			}
+			document.getElementById("id1").innerHTML = text;
+		}
+	</script>
+	<br>
+<!-- Este evento cambia las letras introducidas a mayusculas, pero lo cambie a minusculas -->
+	Desestresese compadre, gritele a la caja y piquele enter: <input type="text" id="id2" onchange="lowerCase()">
+	<br>
+	<script>
+		function lowerCase() {
+			const x = document.getElementById("id2");
+			x.value = x.value.toLowerCase();
+		}
+	</script>
+	<br><br>
+<!-- aqui cuando se le pase el mouse por encima, llamara la funcion m0ver y mostrara el emoji, y despues cuando salga llamara la funcion m0ut -->
+																	
+																										<!-- !HEY, eso es trampa profe!, deje ahi -->
+	<div id="XD" onclick="document.getElementById('XD').style.color='purple'", onmouseover="m0ver(this)" onmouseout="m0ut(this)"
+	style="background-color: #845fd4;max-width:80%;height: 30px;text-align: center;color: black; margin-left: 10% ">Agarre este link rapido profe, se le va a ir!: https://www.youtube.com/watch?v=fC7oUOUEEi4</div>
+	<br><br>
+<!-- Aqui estan unos scripts que se van a utilizar -->
+	<script>
+		function m0ver(obj) {
+			obj.innerHTML = "🐓"
+		}
+
+		function m0ut(obj) {
+			obj.innerHTML = "yyy se le fue... ni modo"
+		}
+		function xdd() {
+		Window = window.open(
+              "https://www.youtube.com/watch?v=t7y4ZNxjt30",
+                "_blank", "width=500, height=450");
+		}
+	</script>
+
+<!-- En esta parte, al darle click al boton va a llamar la funcion "xdd" la cual no existe, es un espejismo y va a mostrar una alerta. -->
+	<button class="button" id="id3" onclick="xdd()">Hola profe neta si le heche ganas, no esta bonito pero le heche ganas, si quiere ver algo bonito piquele aqui</button>
+	<script>
+		document.getElementById("id3").addEventListener("click", function() {
+			alert("kiuvole, yo le dije que estaba bonito");
+		});
+			
+	</script>
+	<!-- tiene frio profe, no le haga caso -->
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<script>
+		document.write(Date());
+	</script>
+
+</body>
 </html>
