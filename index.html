@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Nose XD</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	<!-- cosas css xd -->
 <style>
 	body{
@@ -14,6 +22,18 @@
   	font-family: Arial;
   	font-size: 17px;
 	}
+
+    .carousel-inner img {
+    width: 80%;
+    height: 450px;
+    }
+    .carousel-inner{
+    height: 100%;
+    }
+    .carousel-caption {
+    position: center;
+    top: 200px
+    }
 
 	#anim {
   	background-image: url('https://i.imgur.com/GUumvqS.jpg');
@@ -44,6 +64,16 @@
   	width: 100%;
 	}
 
+    #curifo {
+        font-size: 32px;
+        color: white;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
+
+    #fondo {
+        margin-top: 10%;
+    }
+
 	</style>
 	<title>AAAAAAAAA</title>
 </head>
@@ -62,34 +92,87 @@
     }
 </script>
 
-<!-- animacion cosa... dure como 1 hora y media haciendo que esta cochinada funcionara... pero valio la pena :D -->
-<div class="center" id="anim" title="XDDDD"></div>
-<button onmouseover="style.color = 'orange'" id="yes" class="button" onclick="play(); PlaySound('melody1'); document.getElementById('yes').style.color='red' ;"> Que hara este boton? O:</button>
+<!-- animacion cosa... es una sorpresa -->
 
+    <p><button id="id4" onclick="myFunction2(), play();" class="button w3-button w3-padding-large w3-white w3-border"><b> Que hara este boton O:?</b></button></p>
+      </div>
+  
+      <div class="w3-container"  id="mydiv2">
+        <div class="center" id="anim" title="XDDDD"></div>
+        
+      </div>
 
-	<p id="id1"></p>
-<!-- Este evento checa que las cookies esten habilitadas o no usando la id de <p> -->
-	<script>
-		function checkCookies(){
-			var text = "";
-			if (navigator.cookieEnabled == true){
-				text = "Las cookies estan habilitadas";
-			} else {
-				text = "Las cookies no estan habilitadas";
-			}
-			document.getElementById("id1").innerHTML = text;
-		}
-	</script>
+<script>
+    let genshin = 0;
+	document.getElementById("mydiv2").style.display = "none";
+	function myFunction2() {
+	  var x = document.getElementById("mydiv2");
+	  if (x.style.display === "none") {
+		x.style.display = "block";
+		var path = "https://www.mboxdrive.com/y2mate.com%20-%20Rick%20Astley%20%20Never%20Gonna%20Give%20You%20Up%20Official%20Music%20Video.mp3"
+		var snd = new Audio(path);
+		snd.play();
+        genshin ++;
+        if (genshin > 3){
+            Window = window.open(
+              "https://www.youtube.com/watch?v=MnjjeZ1dc0U",
+                "_blank", "width=700, height=650");
+            document.getElementById("id4").addEventListener("click", function() {
+			alert("ji ji ji ja");
+		});
+        }
+	  } else {
+		x.style.display = "none";
+        
+	  }
+	}
+</script>
+
 	<br>
-<!-- Este evento cambia las letras introducidas a mayusculas, pero lo cambie a minusculas -->
-	Desestresese compadre, gritele a la caja y piquele enter: <input type="text" id="id2" onchange="lowerCase()">
-	<br>
-	<script>
-		function lowerCase() {
-			const x = document.getElementById("id2");
-			x.value = x.value.toLowerCase();
-		}
-	</script>
+    <div id="demo" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+          <li data-target="#demo" data-slide-to="3"></li>
+        </ul>
+         <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://media1.tenor.com/images/276b85f2595c88fd3f9781bf108cdb5f/tenor.gif?itemid=13725186" alt="img1" >
+            <div class="carousel-caption">
+              <br><br><br><br><br><br>
+              <p id="curifo">Presentacion de porque genshin esta feo</p>
+            </div>   
+          </div>
+          <div class="carousel-item">
+            <img src="https://cdn.discordapp.com/attachments/452388082705104896/937352089238126622/45653BD0-B3CA-4684-BF06-5AB1F44E21E1-1.gif" alt="img2" >
+            <div class="carousel-caption">
+              <br><br><br><br><br><br>
+              <p id="curifo">Ta feo</p>
+            </div>   
+          </div>
+          <div class="carousel-item">
+            <img src="https://c.tenor.com/XoyUN160JOcAAAAd/tartaglia-childe-genshin-impact.gif" alt="img">
+            <div class="carousel-caption">
+              <br><br><br><br><br>
+              <p id="curifo">Se sabe mi ip :C</p>
+            </div>   
+          </div>
+          <div class="carousel-item">
+            <img src="https://i.ibb.co/djgdLtD/bing-chilling.png" alt="img"> 
+             <div class="carousel-caption">
+              <br><br><br><br><br><br>
+              <p id="curifo">Bing chilling</p>
+            </div>   
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
 	<br><br>
 <!-- aqui cuando se le pase el mouse por encima, llamara la funcion m0ver y mostrara el emoji, y despues cuando salga llamara la funcion m0ut -->
 																	
@@ -121,11 +204,12 @@
 		});
 			
 	</script>
-	<!-- tiene frio profe, no le haga caso -->
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <div id="fondo">
 	<script>
-		document.write(Date());
+            document.write(Date());
 	</script>
+	</div>
 
 </body>
 </html>
