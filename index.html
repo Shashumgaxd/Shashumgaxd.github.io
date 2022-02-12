@@ -71,7 +71,7 @@
     }
 
     #fondo {
-        margin-top: 10%;
+        margin-top: 4%;
     }
 
 	</style>
@@ -94,7 +94,7 @@
 
 <!-- animacion cosa... es una sorpresa -->
 
-    <p><button id="id4" onclick="myFunction2(), play();" class="button w3-button w3-padding-large w3-white w3-border"><b> Que hara este boton O:?</b></button></p>
+    <p><button id="id4" onclick="myFunction2(), m00ver(this), play();" class="button w3-button w3-padding-large w3-white w3-border"><b> Que hara este boton O:?</b></button></p>
       </div>
   
       <div class="w3-container"  id="mydiv2">
@@ -113,15 +113,15 @@
 		var snd = new Audio(path);
 		snd.play();
         genshin ++;
-        if (genshin > 3){
+        
+	  } else {
+        if (genshin == 1){
             Window = window.open(
               "https://www.youtube.com/watch?v=MnjjeZ1dc0U",
                 "_blank", "width=700, height=650");
             document.getElementById("id4").addEventListener("click", function() {
-			alert("ji ji ji ja");
 		});
         }
-	  } else {
 		x.style.display = "none";
         
 	  }
@@ -174,7 +174,6 @@
         </a>
       </div>
 	<br><br>
-<!-- aqui cuando se le pase el mouse por encima, llamara la funcion m0ver y mostrara el emoji, y despues cuando salga llamara la funcion m0ut -->
 																	
 																										<!-- !HEY, eso es trampa profe!, deje ahi -->
 	<div id="XD" onclick="document.getElementById('XD').style.color='purple'", onmouseover="m0ver(this)" onmouseout="m0ut(this)"
@@ -186,17 +185,20 @@
 			obj.innerHTML = "🐓"
 		}
 
+        function m00ver(obj) {
+            obj.innerHTML = "ji ji ji ja"
+        }
+
 		function m0ut(obj) {
 			obj.innerHTML = "yyy se le fue... ni modo"
 		}
 		function xdd() {
 		Window = window.open(
-              "https://www.youtube.com/watch?v=t7y4ZNxjt30",
+              "https://www.youtube.com/watch?v=4S5XVBOZTSA",
                 "_blank", "width=500, height=450");
 		}
 	</script>
 
-<!-- En esta parte, al darle click al boton va a llamar la funcion "xdd" la cual no existe, es un espejismo y va a mostrar una alerta. -->
 	<button class="button" id="id3" onclick="xdd()">Hola profe neta si le heche ganas, no esta bonito pero le heche ganas, si quiere ver algo bonito piquele aqui</button>
 	<script>
 		document.getElementById("id3").addEventListener("click", function() {
@@ -206,9 +208,10 @@
 	</script>
 
     <div id="fondo">
-	<script>
+        <p id="curifo">wachese la hora profe</p>
+	    <script>
             document.write(Date());
-	</script>
+	    </script>
 	</div>
 
 </body>
